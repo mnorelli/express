@@ -95,7 +95,7 @@ app.get('/', function(req, res) {
 });
 ```
 
-Could be rewriten as:
+Could be rewritten as:
 
 ```js
 // controller
@@ -110,7 +110,7 @@ app.get('/', homeController); // a GET to "/" routes to homeController
 
 #### Logging in Express with Middleware
 
-**Middleware** is simply any function that gets called *after* the application's router recieves a request but *before* the controller handles it.
+**Middleware** is simply any function that gets called *after* the application's router receives a request but *before* the controller handles it.
 
 > Order of events: HTTP Request --> Router --> Middleware --> Controller --> HTTP Response 
 
