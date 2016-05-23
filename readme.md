@@ -74,8 +74,10 @@ app.get('/', function(req, res) {
 });
 
 
-app.listen(port);
-console.log('Server started on', port);
+// start server
+app.listen(port, function() {
+  console.log('Server started on', port); 
+});
 ```
 
 Notice the `GET` verb in combination with the `/` path here. These are the two things needed to route an HTTP request.
@@ -195,8 +197,9 @@ app.get('/api/taquerias', function (req, res) {
 });
 
 // start server
-app.listen(port);
-console.log('Server started on', port);
+app.listen(port, function() {
+  console.log('Server started on', port); 
+});
 ```
 
 > Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it using `curl`. 
