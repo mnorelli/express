@@ -150,7 +150,7 @@ const taquerias = [
   { name: "Taqueria Cancun" }
 ]
 ```
-Now we can render that data when the client sends a GET request a that specified endpoint. 
+Now we can render that data when the client sends a GET request to that specified endpoint. 
 
 ```js
 // taquerias api index route
