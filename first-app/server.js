@@ -16,6 +16,9 @@ const cafes = [
 {name: "The Dive", rating: 4},
 {name: "Bagdhad Cafe", rating: 9}
 ]
+
+app.use(express.static('public'));
+
 // Middleware
 app.use(function(req, res, next) {
   console.log("middleware hit");
@@ -25,7 +28,8 @@ app.use(function(req, res, next) {
 
 app.get('/', function(req, res) {
   console.log("home controller hit");
-  res.send("You're Home!");
+  // res.send("You're Home!");
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get('/about', function(req, res) {
