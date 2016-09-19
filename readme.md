@@ -10,7 +10,7 @@
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 
-Express is a simple, flexible JavaScript library that enables us to more easily build a web server in Node.
+Express is a simple, flexible JavaScript library that enables us to build a web servers in Node.
 
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
