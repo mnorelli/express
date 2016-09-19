@@ -121,7 +121,7 @@ app.get('/', homeController); // a GET to "/" routes to homeController
 
 > Order of events: HTTP Request --> Router --> Middleware --> Controller --> HTTP Response 
 
-Add the following to your app.js file:
+Add the following to the server.js file:
 
 ```javascript
 // Middleware
