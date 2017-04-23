@@ -90,7 +90,7 @@ node server.js
 
 Navigate to `http://localhost:3000` and voila!
 
-##Routes \& Controllers
+##Routes and Controllers
 
 Your application's **routes** comprise of all the possible HTTP verb & path combinations it will respond to. A **controller** is the callback that is executed after any given route is hit. Let's look at it again.
 
