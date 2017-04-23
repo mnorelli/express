@@ -16,8 +16,17 @@ const port    = process.env.PORT || 3000;
 
 // controller
 function homeController(req, res) { // a controller that handles a specific request
+  console.log("home controller hit");
   res.send("You're Home!");
 }
+
+// Middleware  - Order of events: HTTP Request --> Router --> Middleware --> Controller --> HTTP Response
+app.use(function(req, res, next) {
+  console.log("middleware hit");
+  console.log("%s request to %s", req.method, req.path);
+  next();
+});
+
 // route
 app.get('/', homeController); // a GET to "/" routes to homeController
 
