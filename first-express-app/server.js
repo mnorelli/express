@@ -14,9 +14,12 @@ const port    = process.env.PORT || 3000;
 //   console.log("running on port",PORT);
 // });
 
-app.get('/',function(req,res){
-  res.send("woop!");
-});
+// controller
+function homeController(req, res) { // a controller that handles a specific request
+  res.send("You're Home!");
+}
+// route
+app.get('/', homeController); // a GET to "/" routes to homeController
 
 app.listen(port,function(){
   console.log("running on port",port);
