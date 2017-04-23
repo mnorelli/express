@@ -10,7 +10,7 @@
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 
-Express is a simple, flexible JavaScript library that enables us to more easily build a web server in Node.
+Express is a simple, flexible JavaScript library that enables us to build web servers in Node.
 
 ### What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
@@ -74,8 +74,10 @@ app.get('/', function(req, res) {
 });
 
 
-app.listen(port);
-console.log('Server started on', port);
+// start server
+app.listen(port, function() {
+  console.log('Server started on', port); 
+});
 ```
 
 Notice the `GET` verb in combination with the `/` path here. These are the two things needed to route an HTTP request.
@@ -119,7 +121,7 @@ app.get('/', homeController); // a GET to "/" routes to homeController
 
 > Order of events: HTTP Request --> Router --> Middleware --> Controller --> HTTP Response 
 
-Add the following to your app.js file:
+Add the following to the server.js file:
 
 ```javascript
 // Middleware
@@ -195,8 +197,9 @@ app.get('/api/taquerias', function (req, res) {
 });
 
 // start server
-app.listen(port);
-console.log('Server started on', port);
+app.listen(port, function() {
+  console.log('Server started on', port); 
+});
 ```
 
 > Challenge: render a list of cafes as JSON under the route `/api/cafes`. Include 3 cafes, each with a `name` and a `rating` (1-5). Test it using `curl`. 
