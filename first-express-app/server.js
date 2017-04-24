@@ -26,7 +26,7 @@ const taquerias = [
 // controllers
 function homeController(req, res) { // a controller that handles a specific request
   console.log("home controller hit");
-  res.send("You're Home!");
+  res.sendFile(__dirname + "/views/index.html");
 }
 
 function taqController(req, res) {
